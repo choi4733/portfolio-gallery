@@ -1,0 +1,14 @@
+/* banner */
+#banner {
+}
+.banner_imgs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+.banner_imgs img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,79 @@
+/* Event */
+#event {
+}
+.event_preview {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 480px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.event_preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#eventModal {
+  width: min(720px, 90vw);
+  max-width: none;
+  max-height: 90vh;
+  max-height: 90dvh;
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+#eventModal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+#closeEvent {
+  position: sticky;
+  top: 12px;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 12px 12px -52px auto;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s;
+}
+#closeEvent:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#closeEvent:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+#eventModal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

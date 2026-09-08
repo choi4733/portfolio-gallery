@@ -1,14 +1,30 @@
 /* banner */
 #banner {
+  min-width: 0;
 }
 .banner_imgs {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
   gap: 15px;
-  align-items: start;
+  overflow-x: auto;
+  padding-bottom: 15px;
 }
 .banner_imgs img {
   display: block;
-  width: 100%;
-  height: auto;
+  flex-shrink: 0;
+  width: auto;
+  height: 360px;
+  max-width: none;
+}
+
+/* 가로 스크롤 */
+.banner_imgs::-webkit-scrollbar {
+  height: 6px;
+}
+.banner_imgs::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.banner_imgs::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
 }

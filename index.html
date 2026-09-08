@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/artwork.css" />
     <link rel="stylesheet" href="assets/css/banner.css" />
+    <link rel="stylesheet" href="assets/css/event.css" />
+
+    <script src="assets/js/style.js" defer></script>
   </head>
   <body>
     <header class="sidebar">
@@ -93,6 +96,8 @@
           <img src="assets/img/goldBanner.jpg" alt="골드바 배너" />
           <img src="assets/img/yaggwaBanner.jpg" alt="전통약과 배너" />
           <img src="assets/img/jeonbyeongBanner.jpg" alt="전통전병 배너" />
+          <img src="assets/img/omegaBanner.png" alt="오메가3 배너" />
+          <img src="assets/img/omegaBannerM.png" alt="오메가3 모바일 배너" />
         </div>
       </section>
       <!-- Banner Design -->
@@ -102,7 +107,38 @@
           <span class="number">03</span>
           <h2 class="title">Event Page</h2>
         </div>
-        <img src="assets/img/eventpage.jpg" alt="이벤트 페이지" />
+        <div class="event_content">
+          <button
+            type="button"
+            class="event_preview"
+            id="openEvent"
+            aria-label="이벤트 페이지 전체 보기"
+          >
+            <img
+              src="assets/img/eventpage.jpg"
+              alt="시크릿데이 이벤트 페이지"
+            />
+          </button>
+          <div class="event_info">
+            <p class="event_label">EVENT PAGE DESIGN</p>
+            <h3>시크릿데이 <br />연말결산 이벤트</h3>
+            <p class="event_desc">
+              겨울 분위기의 블루 톤과 눈꽃 요소를 활용한 이벤트 페이지입니다.
+              할인율을 크게 배치해 혜택을 강조하고, 리뷰 이벤트는 핑크 톤으로
+              구분했습니다.
+            </p>
+            <p class="event_hint">
+              이미지를 클릭하면 전체 페이지를 볼 수 있어요.
+            </p>
+          </div>
+        </div>
+        <dialog id="eventModal" aria-label="이벤트 페이지 전체보기">
+          <button type="button" id="closeEvent">&times;</button>
+          <img
+            src="assets/img/eventpage.jpg"
+            alt="시크릿데이 이벤트 페이지 전체"
+          />
+        </dialog>
       </section>
       <!-- Event Page -->
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/artwork.css" />
     <link rel="stylesheet" href="assets/css/banner.css" />
     <link rel="stylesheet" href="assets/css/event.css" />
+    <link rel="stylesheet" href="assets/css/vedio.css" />
 
     <script src="assets/js/style.js" defer></script>
   </head>
@@ -46,7 +47,7 @@
           <li>
             <a href="#film">
               <span class="menu_number">04</span>
-              Team Film
+              Video Editing
             </a>
           </li>
           <li>
@@ -127,9 +128,9 @@
               할인율을 크게 배치해 혜택을 강조하고, 리뷰 이벤트는 핑크 톤으로
               구분했습니다.
             </p>
-            <p class="event_hint">
-              이미지를 클릭하면 전체 페이지를 볼 수 있어요.
-            </p>
+            <button type="button" class="event_view" id="viewEvent">
+              전체 페이지 보기 <span aria-hidden="true">↗</span>
+            </button>
           </div>
         </div>
         <dialog id="eventModal" aria-label="이벤트 페이지 전체보기">
@@ -145,10 +146,129 @@
       <section id="film">
         <div class="section_heading">
           <span class="number">04</span>
-          <h2 class="title">Team Film</h2>
+          <h2 class="title">Video Editing</h2>
         </div>
+        <div class="film_content">
+          <a
+            class="film_preview"
+            href="https://www.youtube.com/watch?v=LTgpnV6M3GM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="팀 프로젝트영상 유튜브에서 보기"
+          >
+            <img
+              src="assets/img/teamtumb.jPG"
+              alt="팀 프로젝트 영상 썸네일"
+              loading="lazy"
+            />
+            <span class="film_play" aria-hidden="ture">▶</span>
+            <span class="film_badge">YouTube ↗</span>
+          </a>
+          <div class="film_info">
+            <p class="film_label">TEAM PROJECT</p>
+            <h3>인생 전시회</h3>
+
+            <p class="film_desc">
+              SNS에 보여주기 위해 일상을 연출하는 주인공을 통해, 남들에게 보이는
+              나와 실제 나 사이의 거리, 그리고 과시적인 일상의 공허함을 담은
+              영상입니다.
+            </p>
+            <p class="film_desc">
+              웃으며 보다가도 “내 얘긴데?” 하고 공감할 수 있도록 기획했습니다.
+              마지막에는 질문을 던져 시청자가 자신의 일상을 돌아볼 수 있도록
+              여운을 남겼습니다.
+            </p>
+            <dl class="film_meta">
+              <div>
+                <dt>담당 역할</dt>
+                <dd>기획 · 촬영 구도 구성 · 편집 · 색보정</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Figma · Premiere Pro · After Effects</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- team  -->
+
+        <div class="film_content">
+          <div class="film_video">
+            <video
+              controls
+              playsinline
+              preload="none"
+              poster="assets/img/kingsman.png"
+              aria-label="Kingsman Edit 영상"
+            >
+              <source src="assets/media/kingsman.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="film_info">
+            <p class="film_label">PERSONAL PROJECT</p>
+            <h3>Kingsman Edit</h3>
+
+            <p class="film_desc">
+              영화 ‘킹스맨’의 액션 장면을 재편집한 개인 작업입니다. 음악의
+              비트에 맞춘 컷 편집과 사운드 싱크로 장면의 속도감과 긴장감을
+              살렸습니다.
+            </p>
+
+            <p class="film_desc">
+              색보정과 화면 전환을 활용해 영화 특유의 스타일리시한 분위기를
+              강조했습니다.
+            </p>
+
+            <dl class="film_meta">
+              <div>
+                <dt>작업 내용</dt>
+                <dd>컷 편집 · 색보정 · 사운드 편집</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Premiere Pro</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- kingsman -->
+
+        <div class="film_content">
+          <div class="film_video">
+            <video
+              controls
+              playsinline
+              preload="none"
+              poster="assets/img/marvel.png"
+            >
+              <source src="assets/media/marvel.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="film_info">
+            <p class="film_label">PERSONAL PROJECT</p>
+            <h3>Marvel Edit</h3>
+
+            <p class="film_desc">
+              마블 컷신을 활용해 제작한 개인 편집 작업입니다.
+            </p>
+
+            <dl class="film_meta">
+              <div>
+                <dt>작업 내용</dt>
+                <dd>컷 편집 · 색보정 · 사운드 편집</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Premiere Pro</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- marvel -->
       </section>
-      <!-- Team Film -->
+      <!-- Video Editing -->
 
       <section id="motion">
         <div class="section_heading">

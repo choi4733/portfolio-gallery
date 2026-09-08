@@ -42,3 +42,8 @@ eventModal.addEventListener("click", (event) => {
 eventModal.addEventListener("close", () => {
   document.documentElement.style.overflow = previousOverflow;
 });
+
+// Event js
+document.querySelector("#viewEvent").addEventListener("click", () => {
+  document.querySelector("#eventModal").showModal();
+});

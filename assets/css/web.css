@@ -1,336 +1,94 @@
-/* right card */
-.web {
-  width: 100%;
-}
-.web .section_title_box {
-  grid-column: 1;
-  width: 100%;
-  margin: 0;
+/* Web Design */
+.web_list {
+  display: grid;
+  gap: 36px;
 }
 
 .web_item {
-  grid-column: 2;
-  width: 100%;
-  max-width: none;
-  margin: 0 0 28px 0;
   display: grid;
-  grid-template-columns: 1.5fr 340px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  min-width: 0;
+}
 
-  padding: 18px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
+.web_item + .web_item {
+  padding-top: 36px;
+  border-top: 1px solid #eee;
+}
+
+/* 사이트 썸네일 */
+.web_preview {
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  transition:
-    transform 0.4s ease,
-    background 0.4s ease;
-}
-.web_item:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(0, 255, 255, 0.3);
-
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f5f5f5;
 }
 
-/* thumbnail */
-.web_img {
-  width: 100%;
-
-  height: auto;
-
-  border-radius: 12px;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.03);
-}
-.web_img img {
+.web_preview img {
+  display: block;
   width: 100%;
   height: 100%;
-
-  display: block;
-
   object-fit: cover;
-
-  transition: transform 0.5s ease;
+  object-position: top;
 }
 
-.web_item:hover .web_img img {
-  transform: scale(1.03);
-}
-
-/* text */
+/* 사이트 설명 */
 .web_info {
-  width: 100%;
-
-  padding-top: 4px;
-
-  color: #fff;
+  min-width: 0;
 }
 
 .web_label {
-  display: inline-block;
-
-  margin-bottom: 10px;
-
-  color: #00ffff;
-
-  font-size: 0.82rem;
+  margin: 0 0 16px;
+  color: #0041cc;
+  font-size: 12px;
   font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
 }
 
 .web_info h3 {
-  margin-bottom: 14px;
-
-  font-size: 1.9rem;
+  margin: 0 0 20px;
+  color: #111;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .web_desc {
-  margin-bottom: 18px;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 0.95rem;
-  line-height: 1.7;
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
   word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
-/* meta */
+/* 작업 정보 */
 .web_meta {
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
-.web_meta li {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 8px;
+.web_meta > div {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 12px;
 }
 
-.web_meta span {
-  min-width: 72px;
-
-  color: #00ffff;
-
-  font-size: 0.84rem;
-  font-weight: 600;
+.web_meta dt {
+  color: #888;
 }
 
-.web_meta strong {
-  flex: 1;
-
-  color: rgba(255, 255, 255, 0.92);
-
-  font-size: 0.84rem;
-  line-height: 1.5;
-}
-
-/* button */
-.web_btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 140px;
-  height: 40px;
-
-  margin-top: 14px;
-
-  border: 1px solid #00ffff;
-  border-radius: 999px;
-
-  color: #00ffff;
-
-  font-size: 1rem;
-  font-weight: 600;
-}
-.web_btn:hover {
-  background: #00ffff;
-  color: #001b1d;
-
-  transform: translateY(-2px);
-}
-
-/*미디어쿼리 */
-@media (max-width: 1200px) {
-  .web_item {
-    grid-template-columns: 1.35fr 320px;
-    gap: 24px;
-    padding: 18px;
-  }
-
-  .web_info h3 {
-    font-size: 1.65rem;
-  }
-
-  .web_desc {
-    font-size: 0.88rem;
-    line-height: 1.75;
-  }
-
-  .web_meta span,
-  .web_meta strong {
-    font-size: 0.8rem;
-  }
-
-  .web_btn {
-    width: 130px;
-    height: 38px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .web_item {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .web_img {
-    height: 300px;
-  }
-
-  .web_info {
-    padding-top: 0;
-  }
-
-  .web_info h3 {
-    font-size: 1.6rem;
-  }
-
-  .web_desc {
-    font-size: 0.88rem;
-    line-height: 1.75;
-  }
-}
-
-@media (max-width: 768px) {
-  .web {
-    padding: 90px 0 80px;
-  }
-
-  .web .section_title_box {
-    width: 100%;
-    position: static;
-    text-align: center;
-    margin-bottom: 42px;
-  }
-
-  .web .section_title_box h2 {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-  }
-
-  .web .section_title_box h2 span::after {
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
-  }
-
-  .web .section_title_box p {
-    max-width: 340px;
-    margin: 0 auto;
-    font-size: 0.9rem;
-    line-height: 1.8;
-  }
-
-  .web_inner {
-    width: 100%;
-    margin-top: 0;
-  }
-
-  .web_item {
-    display: block;
-    padding: 18px;
-    margin-bottom: 24px;
-  }
-
-  .web_img {
-    height: 280px;
-    margin-bottom: 22px;
-  }
-  .web_info {
-    margin-top: 15px;
-  }
-  .web_info h3 {
-    font-size: 1.7rem;
-  }
-
-  .web_desc {
-    font-size: 0.9rem;
-    line-height: 1.8;
-  }
-}
-
-@media (max-width: 480px) {
-  .web {
-    padding: 90px 0 70px;
-  }
-
-  .web .section_title_box {
-    margin-bottom: 38px;
-  }
-
-  .web .section_title_box h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .web .section_title_box p {
-    max-width: 280px;
-    font-size: 0.84rem;
-  }
-
-  .web_item {
-    padding: 14px;
-    border-radius: 12px;
-    margin-bottom: 22px;
-  }
-
-  .web_img {
-    height: 200px;
-    margin-bottom: 18px;
-    border-radius: 10px;
-  }
-
-  .web_info h3 {
-    font-size: 1.35rem;
-  }
-
-  .web_desc {
-    font-size: 0.82rem;
-    line-height: 1.75;
-  }
-
-  .web_meta {
-    padding-top: 14px;
-  }
-
-  .web_meta li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .web_meta span {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 0.78rem;
-  }
-
-  .web_meta strong {
-    display: block;
-    font-size: 0.8rem;
-  }
-
-  .web_btn {
-    width: 100%;
-    height: 40px;
-    margin-top: 8px;
-    font-size: 0.9rem;
-  }
+.web_meta dd {
+  margin: 0;
+  color: #444;
+  overflow-wrap: break-word;
 }

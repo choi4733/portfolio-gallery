@@ -3,12 +3,11 @@
 }
 .film_content {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
   align-items: center;
   gap: 48px;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
 }
 .film_preview {
   position: relative;
@@ -136,7 +135,7 @@
   word-break: keep-all;
 }
 .film_content + .film_content {
-  margin-top: 64px;
-  padding-top: 64px;
+  margin-top: 36px;
+  padding-top: 36px;
   border-top: 1px solid #eee;
 }

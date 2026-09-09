@@ -8,6 +8,7 @@
   padding: 50px 30px 50px 50px;
   border-right: 1px solid #e5e5e5;
   overflow: auto;
+  box-sizing: border-box;
 }
 .sidebar_profile {
   display: flex;
@@ -56,21 +57,35 @@
 }
 
 /* 메인컨텐츠 공통요소 */
+
 .main_content {
   margin-left: 250px;
-  padding: 50px 50px 80px;
+  padding: 60px 50px 100px;
 }
+
+/* 제목과 작품을 포함한 섹션 전체의 폭 */
+.main_content > section {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* 섹션 구분선 위아래 여백 */
 .main_content > section + section {
-  margin-top: 30px;
-  padding-top: 30px;
+  margin-top: 60px;
+  padding-top: 50px;
   border-top: 1px solid #e5e5e5;
 }
+
+/* 섹션 제목 */
 .section_heading {
   display: flex;
   align-items: baseline;
   gap: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
+
 .number {
   flex-shrink: 0;
   font-size: 1.7rem;
@@ -78,10 +93,216 @@
   line-height: 1.2;
   color: #0041cc;
 }
+
 .title {
   margin: 0;
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.2;
   color: #171717;
+}
+/* 상단 소개 */
+.portfolio_intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  align-items: center;
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 44px;
+  padding: 16px 0 44px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.intro_text {
+  min-width: 0;
+}
+
+.intro_label {
+  margin: 0 0 20px;
+  color: #777;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.intro_title {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(40px, 4.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+
+.intro_title span {
+  color: #0041cc;
+}
+
+.intro_desc {
+  margin: 22px 0 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.intro_visual {
+  min-width: 0;
+}
+
+.intro_visual video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #111;
+}
+
+.intro_caption {
+  margin: 10px 0 0;
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+.main_content > .portfolio_intro + #artwork {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* 사이트 보기 · 전체 페이지 보기 공통 */
+.web_link,
+.event_view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 28px 0 0;
+  padding: 8px 0;
+
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+
+  color: #333;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+
+  appearance: none;
+  cursor: pointer;
+
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.web_link:hover,
+.event_view:hover {
+  color: #0041cc;
+  border-bottom-color: #0041cc;
+}
+
+.web_link:focus-visible,
+.event_view:focus-visible {
+  outline: 2px solid #0041cc;
+  outline-offset: 4px;
+}
+
+.web_link span,
+.event_view span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* footer */
+#footer {
+  margin-left: 250px;
+  padding: 0 50px 80px;
+}
+
+.footer_inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 28px;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.footer_info {
+  min-width: 0;
+}
+
+.footer_name {
+  margin: 0 0 14px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.footer_copy,
+.footer_notice {
+  margin: 0;
+  color: #888;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.footer_notice {
+  margin-top: 4px;
+}
+
+/* 맨 위로 이동 */
+.footer_top {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+
+  padding: 4px 0;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer_top span {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.footer_top:hover {
+  color: #0041cc;
+}
+
+.footer_top:hover span {
+  transform: translateY(-3px);
+}
+
+.footer_top:focus-visible {
+  outline: 2px solid #0041cc;
+  outline-offset: 4px;
 }

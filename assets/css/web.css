@@ -40,15 +40,6 @@
   min-width: 0;
 }
 
-.web_label {
-  margin: 0 0 16px;
-  color: #0041cc;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.6;
-  letter-spacing: 0.08em;
-}
-
 .web_info h3 {
   margin: 0 0 20px;
   color: #111;
@@ -91,4 +82,107 @@
   margin: 0;
   color: #444;
   overflow-wrap: break-word;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 1200px) {
+  .web_list {
+    gap: 30px;
+  }
+
+  .web_item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .web_item + .web_item {
+    padding-top: 30px;
+  }
+
+  .web_label {
+    margin-bottom: 12px;
+  }
+
+  .web_info h3 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+  }
+
+  .web_meta {
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+
+  .web_meta > div {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .web_link {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .web_item {
+    gap: 24px;
+  }
+
+  .web_info h3 {
+    margin-bottom: 16px;
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .web_list {
+    gap: 36px;
+  }
+
+  .web_item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .web_item + .web_item {
+    padding-top: 36px;
+  }
+
+  .web_info h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .web_list {
+    gap: 30px;
+  }
+
+  .web_item {
+    gap: 20px;
+  }
+
+  .web_item + .web_item {
+    padding-top: 30px;
+  }
+
+  .web_info h3 {
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+  }
+
+  .web_desc {
+    font-size: 13px;
+  }
+
+  .web_meta {
+    margin-top: 18px;
+    padding-top: 14px;
+  }
+
+  .web_link {
+    margin-top: 18px;
+  }
 }

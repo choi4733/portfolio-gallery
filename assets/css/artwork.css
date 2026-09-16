@@ -1,6 +1,4 @@
 /* Artwork */
-#artwork {
-}
 .artwork_imgs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -8,8 +6,32 @@
   width: 100%;
   margin: 0;
 }
+
 .artwork_imgs img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 1200px) {
+  .artwork_imgs {
+    gap: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .artwork_imgs {
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .artwork_imgs {
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .artwork_imgs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
 }

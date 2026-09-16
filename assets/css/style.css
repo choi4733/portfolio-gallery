@@ -326,38 +326,6 @@
   margin-top: 4px;
 }
 
-.footer_top {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  padding: 4px 0;
-  color: #666;
-  font-size: 12px;
-  line-height: 1.5;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer_top span {
-  display: inline-block;
-  font-size: 18px;
-  transition: transform 0.2s;
-}
-
-.footer_top:hover {
-  color: #0041cc;
-}
-
-.footer_top:hover span {
-  transform: translateY(-3px);
-}
-
-.footer_top:focus-visible {
-  outline: 2px solid #0041cc;
-  outline-offset: 4px;
-}
-
 .scroll_reveal.is_pending {
   opacity: 0;
   transform: translateY(20px);
@@ -857,4 +825,75 @@
   .cursor_ring.is_visible {
     opacity: var(--ring-opacity);
   }
+}
+
+/* Top 버튼 */
+
+.top_btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  color: #555555;
+  font-size: 18px;
+  text-decoration: none;
+
+  /* 처음에는 숨김 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* 스크롤 후 표시 */
+.top_btn.is_visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 마우스 오버 */
+.top_btn:hover {
+  color: #ffffff;
+  background-color: #0041cc;
+  border-color: #0041cc;
+}
+
+.top_btn:focus-visible {
+  outline: 2px solid #0041cc;
+  outline-offset: 4px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .top_btn {
+    right: 20px;
+    bottom: 20px;
+
+    width: 40px;
+    height: 40px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

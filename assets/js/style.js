@@ -218,6 +218,7 @@ function initPortfolio() {
   initMobileMenu();
   initScrollReveal();
   initActiveMenu();
+  initTopButton();
 }
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initPortfolio, {
@@ -433,3 +434,22 @@ function initActiveMenu() {
     initCursorTrail();
   }
 })();
+
+/* Top 버튼 */
+function initTopButton() {
+  const topButton = document.querySelector(".top_btn");
+
+  if (!topButton) return;
+
+  function updateTopButton() {
+    // 400px 이상 스크롤하면 표시
+    topButton.classList.toggle("is_visible", window.scrollY > 400);
+  }
+
+  window.addEventListener("scroll", updateTopButton, {
+    passive: true,
+  });
+
+  // 새로고침했을 때 현재 스크롤 위치 확인
+  updateTopButton();
+}

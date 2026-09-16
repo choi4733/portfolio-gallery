@@ -1,0 +1,89 @@
+/* About */
+
+.about_content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 60px;
+}
+
+.about_content > * {
+  min-width: 0;
+}
+
+/* 프로필 사진 */
+.about_profile {
+  width: 180px;
+  margin: 18px 0 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.about_profile_img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 소개 문장 */
+#about .web_desc {
+  font-size: 14px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* Skills · Education · Certificate · Experience 제목 */
+#about .about_group .web_label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* 도구 · 교육 · 자격증 · 경력 사이의 간격 */
+.about_group + .about_group {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #eee;
+}
+
+/* 메타 정보 */
+#about .web_meta > div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+}
+
+#about .web_meta dt,
+#about .web_meta dd {
+  min-width: 0;
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .about_content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .about_profile {
+    width: 160px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+  .about_profile {
+    width: 140px;
+    margin: 16px 0 18px;
+  }
+
+  #about .web_meta > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+}

@@ -229,7 +229,8 @@
 
 .main_content .event_label,
 .main_content .film_label,
-.main_content .web_label {
+.main_content .web_label,
+.main_content .motion_label {
   margin-bottom: 12px;
   color: #0041cc;
   font-size: 13px;

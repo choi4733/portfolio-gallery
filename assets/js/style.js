@@ -47,6 +47,48 @@ function initScrollReveal() {
   });
 }
 
+/* 이벤트 페이지 모달 */
+function initEventModal() {
+  const openButtons = document.querySelectorAll("#openEvent, #viewEvent");
+  const modal = document.querySelector("#eventModal");
+  const closeButton = document.querySelector("#closeEvent");
+
+  if (!openButtons.length || !modal || !closeButton) return;
+
+  let previousOverflow = "";
+
+  // 이미지 또는 전체보기 버튼 클릭 → 모달 열기
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (modal.open) return;
+
+      previousOverflow = document.documentElement.style.overflow;
+
+      modal.showModal();
+      modal.scrollTop = 0;
+
+      // 뒤쪽 페이지 스크롤 잠금
+      document.documentElement.style.overflow = "hidden";
+    });
+  });
+
+  closeButton.addEventListener("click", () => {
+    modal.close();
+  });
+
+  modal.addEventListener("close", () => {
+    document.documentElement.style.overflow = previousOverflow;
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initEventModal, {
+    once: true,
+  });
+} else {
+  initEventModal();
+}
+
 /* 모바일 왼쪽 슬라이드 메뉴 */
 function initMobileMenu() {
   const sidebar = document.querySelector(".sidebar");

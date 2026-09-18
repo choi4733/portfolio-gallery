@@ -898,3 +898,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* cursor */
+body,
+body * {
+  cursor: default;
+}
+a,
+a *,
+button,
+button * {
+  cursor: pointer;
+}

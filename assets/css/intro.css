@@ -23,3 +23,17 @@ body.intro_active .top_btn{opacity:0;pointer-events:none}.sidebar{background:#ff
 .space_footer{bottom:12vh}
 @media(max-width:700px){.space_footer{bottom:9vh}.orbit_three{top:65%}.orbit_three img{height:14vh}}
 @media(prefers-reduced-motion:reduce){.immersive_stage{-webkit-mask-image:none;mask-image:none}.space_footer{bottom:24px}}
+<<<<<<< HEAD
+=======
+/* Selected work covers share a frame; source artwork remains unchanged. */
+.orbit_card{width:22vw;transform:translate(var(--pointer-x),var(--pointer-y)) rotateY(-5deg)}
+.orbit_one{left:26%;top:36%}.orbit_two{left:50%;top:45%}.orbit_three{left:74%;top:54%;width:22vw}
+.orbit_visual{aspect-ratio:16/10;overflow:hidden;background:#101d2b;border:1px solid #d0e3ff33;box-shadow:0 16px 45px #0005}
+.orbit_card .orbit_visual img{height:100%;width:100%;object-fit:cover;border:0;background:transparent;transition:transform .35s}
+.orbit_banner_visual{background:#06355b;display:flex;align-items:center}
+.orbit_card .orbit_banner_visual img{object-fit:contain}
+.orbit_card:hover .orbit_visual img{transform:scale(1.035)}
+.orbit_project{margin:9px 0 0;font-size:12px;letter-spacing:.03em;color:#fff;font-weight:400}
+@media(max-width:700px){.orbit_card,.orbit_three{width:40vw}.orbit_one{left:7%;top:36%}.orbit_two{left:53%;top:46%}.orbit_three{left:28%;top:66%}.orbit_project{font-size:10px}.orbit_card .orbit_visual img{height:100%}}
+@media(prefers-reduced-motion:reduce){.orbit_card,.orbit_three{position:relative;left:auto;top:auto;width:auto;transform:none}.orbit_card .orbit_visual img{transition:none}.orbit_card:hover .orbit_visual img{transform:none}}
+>>>>>>> 2117cbd (수정)

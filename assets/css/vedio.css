@@ -243,5 +243,20 @@
 
 /* Mobile spacing between projects. */
 @media (max-width: 768px) {
-  .film_content + .film_content { margin-top: 40px; padding-top: 40px; }
+  .film_content + .film_content {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+}
+
+/* Match the spacing rhythm of the WEB project list. */
+.film_content + .film_content {
+  margin-top: 70px;
+  padding-top: 70px;
+}
+@media (max-width: 1200px) {
+  .film_content + .film_content {
+    margin-top: 48px;
+    padding-top: 48px;
+  }
 }

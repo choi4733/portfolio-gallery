@@ -1,7 +1,7 @@
 /* Web Design */
 .web_list {
   display: grid;
-  gap: 36px;
+  gap: 70px;
 }
 
 .web_item {
@@ -189,6 +189,26 @@
 
 /* More breathing room between projects on mobile. */
 @media (max-width: 768px) {
-  .web_list { gap: 40px; }
-  .web_item + .web_item { padding-top: 40px; }
+  .web_list {
+    gap: 40px;
+  }
+  .web_item + .web_item {
+    padding-top: 40px;
+  }
+}
+
+/* More space between individual projects. */
+.web_list {
+  gap: 56px;
+}
+.web_item + .web_item {
+  padding-top: 56px;
+}
+@media (max-width: 1200px) {
+  .web_list {
+    gap: 48px;
+  }
+  .web_item + .web_item {
+    padding-top: 48px;
+  }
 }

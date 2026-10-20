@@ -13,9 +13,13 @@
   const p = (reduced.matches || mobile.matches) ? 0 : clamp(-rect.top / Math.max(1,section.offsetHeight-innerHeight));
   const reveal = clamp((p-.25)/.35);
   section.style.setProperty('--travel',p);
+  section.style.setProperty('--scene-fade', clamp((p - .72) / .28));
   section.style.setProperty('--hero-alpha',1-clamp(p/.32));
   section.style.setProperty('--gallery-alpha',reveal);
   section.style.setProperty('--gallery-offset',`${(1-reveal)*90}px`);
+  const earthProgress = reduced.matches ? 0 : (mobile.matches ? clamp(-rect.top / Math.max(1, innerHeight)) : p);
+  section.dispatchEvent(new CustomEvent('earthprogress', { detail: earthProgress }));
+  section.style.setProperty('--earth-scale', 1.08 + earthProgress * .06);
   section.style.setProperty('--bg-scale',1+p*.12);
   section.style.setProperty('--bg-x',`${p*innerWidth*.045}px`);
   section.style.setProperty('--bg-y',`${p*innerHeight*.09}px`);

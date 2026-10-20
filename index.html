@@ -51,10 +51,31 @@
       href="assets/css/navigation.css?v=seven-scroll-20261020"
     />
     <script src="assets/js/style.js?v=navigation-20261020" defer></script>
-    <script src="assets/js/intro.js?v=responsive-20261020" defer></script>
+    <script src="assets/js/intro.js?v=globe-20261020" defer></script>
+    <script src="assets/js/earth-globe.js?v=20261020" defer></script>
     <script src="assets/js/scroll-navigation.js?v=20261020" defer></script>
+    <link rel="preload" href="assets/img/space-earth.png" as="image" />
+    <link rel="stylesheet" href="assets/css/loader.css?v=20261020" />
+    <script>
+      (() => {
+        try {
+          if (!location.hash && !sessionStorage.getItem('portfolio-intro-seen') &&
+              !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('portfolio_loading');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <script src="assets/js/loader.js?v=20261020" defer></script>
   </head>
   <body id="top">
+    <div class="portfolio_loader" aria-hidden="true">
+      <div class="loader_content">
+        <p class="loader_name">CHOI HEEKYUNG</p>
+        <p class="loader_caption">DESIGN PORTFOLIO</p>
+        <div class="loader_track"><span></span></div>
+      </div>
+    </div>
     <div class="mobile_masthead"><a href="#top">CHOI HEEKYUNG</a></div>
     <header class="sidebar">
       <div class="sidebar_profile">
@@ -146,8 +167,8 @@
       </div>
     </section>
 
-    <main class="main_content">
-      <header class="works_index">
+    <div class="archive_bridge">
+<header class="works_index">
         <p>03 / THE WORK ARCHIVE</p>
         <h2>아이디어가 도착한 곳<span>.</span></h2>
         <div class="works_index_bottom">
@@ -160,6 +181,9 @@
           ><a href="#film">Video Editing</a><a href="#artwork">Artwork</a>
         </nav>
       </header>
+    </div>
+    <main class="main_content">
+      
       <section id="web">
         <div class="section_heading">
           <span class="number">01</span>

@@ -118,3 +118,27 @@ body.intro_active .sidebar { background: transparent; border-color: transparent;
 @media(prefers-reduced-motion:reduce) {
   body .sidebar, .mobile_masthead, .sidebar_toggle { transition: none; }
 }
+
+/* Carry the dark orbit into the archive heading before the white project panel. */
+.archive_bridge { position: relative; z-index: 6; background: #03080f; padding: 56px 5vw 104px; color: #eef3f9; }
+.archive_bridge .works_index { max-width: 1200px; margin: 0 auto; padding: 0; border: 0; color: #eef3f9; }
+.archive_bridge .works_index > p { color: #8d9eb4; }
+.archive_bridge .works_index h2 { font-size: clamp(32px,4vw,54px); }
+.archive_bridge .works_index h2 span { color: #9bbce8; }
+.archive_bridge .works_index_bottom { color: #a1adbc; }
+.archive_bridge .works_index_bottom a { color: #adbfda; }
+.archive_bridge .works_index nav a { border-color: #ffffff26; color: #b7c4d6; }
+.archive_bridge .works_index nav a:hover { background: #ffffff0c; color: #fff; }
+.archive_bridge .works_index a:focus-visible { outline-color: #c3d8f5; }
+body .main_content { position: relative; z-index: 7; margin-top: -32px; border-radius: 32px 32px 0 0; padding-top: 72px; }
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+ .earth_globe.is_ready { opacity: calc(1 - var(--scene-fade,0) * .95); }
+ .immersive_stage .space_background { opacity: calc(1 - var(--scene-fade,0) * .95); }
+ .space_footer { opacity: calc(1 - var(--scene-fade,0)); }
+}
+@media (max-width: 768px) {
+ .archive_bridge { padding: 40px 20px 80px; }
+ .archive_bridge .works_index h2 { font-size: clamp(28px,7vw,40px); }
+ .archive_bridge .works_index_bottom { flex-direction: column; gap: 18px; }
+ body .main_content { margin-top: -24px; border-radius: 24px 24px 0 0; padding-top: 44px; }
+}

@@ -652,3 +652,31 @@ body{background:#03080f}
   .main_content > section + section { padding-top: 48px; }
   .main_content > #artwork { padding-top: 70px; }
 }
+
+/* Scroll-linked Earth movement; keep the text and navigation upright. */
+.space_background {
+ inset: -18%;
+ transform-origin: 70% 80%;
+ transform: translate(var(--bg-x),var(--bg-y)) rotate(var(--earth-rotation,0deg)) scale(var(--earth-scale,1.08));
+}
+@media (max-width: 768px) {
+ .space_background {
+  inset: -12%; height: 124svh;
+  transform-origin: 70% 70%;
+  transform: rotate(var(--earth-rotation,0deg)) scale(var(--earth-scale,1.08));
+ }
+}
+@media (prefers-reduced-motion: reduce) {
+ .space_background { transform: none; }
+}
+/* A shaded sphere rotates its surface instead of tilting the background photo. */
+.space_background { inset: -12%; transform: none; }
+.earth_globe { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity .6s ease; pointer-events: none; }
+.earth_globe.is_ready { opacity: 1; }
+.immersive_stage.has_globe .space_background { background-image: none; background-color: #03080f; }
+@media (max-width: 768px) {
+ .space_background { inset: 0; height: 100svh; transform: none; }
+ .earth_globe { height: 100svh; }
+}
+@media (prefers-reduced-motion: reduce) { .earth_globe { transition: none; } }
+.immersive_stage.has_globe .space_background { background-color: transparent; }

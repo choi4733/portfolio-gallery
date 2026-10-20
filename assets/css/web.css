@@ -186,3 +186,9 @@
     margin-top: 18px;
   }
 }
+
+/* More breathing room between projects on mobile. */
+@media (max-width: 768px) {
+  .web_list { gap: 40px; }
+  .web_item + .web_item { padding-top: 40px; }
+}

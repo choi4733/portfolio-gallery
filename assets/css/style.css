@@ -741,7 +741,7 @@
 
   .section_heading {
     gap: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
   }
 
   .section_heading::after {

@@ -641,3 +641,14 @@ body{background:#03080f}
   padding: 0;
   object-fit: contain;
 }
+/* Add 20px above and below each portfolio section on mobile. */
+@media (max-width: 768px) {
+  .main_content > section { padding-bottom: 20px; }
+  .main_content > section + section { padding-top: 56px; }
+  .main_content > #web { padding-top: 20px; }
+  .main_content > #artwork { padding-top: 70px; }
+}
+@media (max-width: 480px) {
+  .main_content > section + section { padding-top: 48px; }
+  .main_content > #artwork { padding-top: 70px; }
+}

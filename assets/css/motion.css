@@ -106,3 +106,8 @@
     font-size: 13px;
   }
 }
+
+/* Mobile spacing between projects. */
+@media (max-width: 768px) {
+  .motion_list { row-gap: 80px; }
+}

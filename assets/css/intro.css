@@ -591,3 +591,53 @@ body{background:#03080f}
 @media(max-width:768px){.main_content{width:100%;margin-left:0;border-radius:24px 24px 0 0}.sidebar{z-index:1100}.space_nav{font-size:9px}}
 @media(max-width:700px){.space_footer{bottom:24px}.orbit_card,.orbit_three{width:40vw}.orbit_one{left:7%;top:36%}.orbit_two{left:53%;top:46%}.orbit_three{left:28%;top:67%}.orbit_project small{font-size:8px}.orbit_card .orbit_visual img{height:100%}.orbit_card .orbit_banner_visual img{padding:6px}.orbit_preview{height:100%}.orbit_project{font-size:10px}.orbit_play{font-size:7px!important;padding:4px 6px!important}}
 @media(prefers-reduced-motion:reduce){.orbit_card,.orbit_three{width:auto;left:auto;top:auto}.space_background{transform:none}.orbit_play{display:none}.main_content{border-radius:0}}
+
+/* Mobile uses document flow, so short screens and longer text cannot overlap cards. */
+@media(max-width:768px){
+ .immersive{height:auto}
+ .immersive_stage{position:relative;height:auto;min-height:100svh;overflow:hidden}
+ .space_background{inset:0;height:100svh;transform:none;background-position:62% center;opacity:.85}
+ .immersive_stage::after{background:linear-gradient(to bottom,transparent 35%,#03080f 95%);height:100svh;bottom:auto}
+ .space_nav{left:80px;right:20px;top:30px;gap:16px;font-size:9px;letter-spacing:.08em}
+ .space_nav nav{gap:16px}
+ .space_hero{position:relative;left:auto;right:auto;top:auto;min-height:92svh;padding:clamp(145px,25svh,220px) 7vw 100px;opacity:1;transform:none}
+ .space_hero h1{font-size:clamp(52px,12.5vw,90px);line-height:1;letter-spacing:-.06em}
+ .space_hero .space_eyebrow{font-size:9px;line-height:1.8;letter-spacing:.12em}
+ .space_description{font-size:14px;line-height:1.9;max-width:32em}
+ .orbit_gallery{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:30px;padding:20px 7vw 36px;opacity:1;transform:none;perspective:none;pointer-events:auto}
+ .orbit_heading{position:relative;inset:auto;margin-bottom:4px}
+ .orbit_heading h2{font-size:clamp(32px,7vw,48px)}
+ .orbit_heading .space_eyebrow{font-size:10px}
+ .orbit_line{display:none}
+ .orbit_card,.orbit_three{position:relative;inset:auto;width:100%;max-width:520px;justify-self:center;transform:none;filter:none}
+ .orbit_visual{width:100%;aspect-ratio:16/10}
+ .orbit_card .orbit_visual img,.orbit_preview{height:100%;width:100%}
+ .orbit_card span{font-size:10px;padding-top:12px}
+ .orbit_project{font-size:15px}.orbit_project small{font-size:12px}
+ .orbit_play{display:none}
+ .space_footer{position:relative;inset:auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;padding:0 7vw 44px;font-size:9px}
+ .space_footer .space_chapter{display:none}
+ body.intro_active .sidebar.is_menu_open{opacity:1;pointer-events:auto}
+ .main_content{padding-inline:20px}
+ .web_desc,.film_desc,.motion_desc{font-size:15px;line-height:1.85}
+ .web_meta{font-size:13px}
+ .home_shop_link{margin-left:16px}
+ .works_index nav a{min-height:44px;display:inline-flex;align-items:center}
+ .web_link{min-height:44px;display:inline-flex;align-items:center}
+}
+@media(max-width:360px){.space_nav{left:76px;right:12px;font-size:8px}.space_nav nav{gap:10px}.space_hero{padding-inline:20px}.space_hero h1{font-size:52px}.orbit_gallery{padding-inline:20px}.main_content{padding-inline:16px}}
+@media(max-width:768px) and (max-height:500px){.space_hero{padding-top:120px;padding-bottom:60px;min-height:100svh}.space_hero h1{font-size:58px}.space_description{margin-top:18px}}
+
+/* Let the wide banner define its own height on every screen. */
+.orbit_visual.orbit_banner_visual {
+  display: block;
+  aspect-ratio: auto;
+  background: transparent;
+}
+.orbit_card .orbit_visual.orbit_banner_visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  object-fit: contain;
+}

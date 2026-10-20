@@ -98,6 +98,8 @@ function initMobileMenu() {
   const mobile = window.matchMedia("(max-width: 768px)");
   const root = document.documentElement;
   const page = [
+    document.querySelector(".immersive"),
+    document.querySelector(".mobile_masthead"),
     document.querySelector(".main_content"),
     document.querySelector("#footer"),
   ].filter(Boolean);
@@ -274,11 +276,11 @@ function initActiveMenu() {
   const links = [...document.querySelectorAll('.sidebar_menu a[href^="#"]')];
 
   const items = links
-    .map((link) => ({
-      link,
-      section: document.getElementById(link.getAttribute("href").slice(1)),
-    }))
-    .filter((item) => item.section);
+    .flatMap(link => (link.dataset.sections || link.hash.slice(1)).split(" ").map(id => ({
+      link, section: document.getElementById(id)
+    })))
+    .filter(item => item.section)
+    .sort((a, b) => a.section.compareDocumentPosition(b.section) & 4 ? -1 : 1);
 
   if (!items.length) return;
 

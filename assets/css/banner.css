@@ -11,7 +11,7 @@
 /* Allocate both artwork widths from the available container, not a fixed height. */
 .banner_omega {
   display: grid;
-  grid-template-columns: minmax(0, 3.15fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3.15fr);
   align-items: start;
   gap: 20px;
   margin-top: 40px;

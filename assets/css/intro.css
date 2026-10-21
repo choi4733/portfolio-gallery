@@ -680,3 +680,40 @@ body{background:#03080f}
 }
 @media (prefers-reduced-motion: reduce) { .earth_globe { transition: none; } }
 .immersive_stage.has_globe .space_background { background-color: transparent; }
+
+/* Card movement follows the longer globe scroll, with a brief fade at entry. */
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+ .orbit_gallery { opacity: 1; transform: none; }
+ .orbit_heading, .orbit_line { opacity: 0; transition: opacity .3s ease; }
+ .orbit_gallery.is_visible .orbit_heading,
+ .orbit_gallery.is_visible .orbit_line { opacity: 1; }
+ .orbit_card {
+  opacity: var(--card-alpha, 0);
+  visibility: var(--card-visibility, hidden);
+  transform: translate(var(--pointer-x), calc(var(--pointer-y) + var(--card-rise, 80px))) rotateY(-5deg);
+  transition: filter .25s;
+ }
+}
+/* A compact, expandable account of the renewal decision. */
+.renewal_case { grid-column:1/-1; min-width:0; border:1px solid #dce3ec; border-radius:12px; margin-top:8px; overflow:hidden; background:#f8fafc; }
+.renewal_case summary { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:20px 24px; cursor:pointer; color:#172d4b; font-size:15px; font-weight:600; list-style:none; }
+.renewal_case summary::-webkit-details-marker { display:none; }
+.renewal_case summary span { font-size:21px; font-weight:400; }
+.renewal_case[open] summary { border-bottom:1px solid #dce3ec; }
+.renewal_case[open] summary span { transform:rotate(45deg); }
+.renewal_case summary:focus-visible, .renewal_case a:focus-visible { outline:2px solid #0041cc; outline-offset:-4px; }
+.renewal_case_body { padding:30px 24px; }
+.renewal_case_kicker { font:10px Arial,sans-serif; letter-spacing:.14em; color:#315f9b; margin:0 0 12px; }
+.renewal_case h4 { font-size:clamp(20px,2vw,28px); line-height:1.5; color:#17212f; margin:0 0 14px; letter-spacing:-.04em; }
+.renewal_case_intro, .renewal_compare_caption { color:#465365; font-size:14px; line-height:1.9; margin:0; max-width:72em; }
+.renewal_case h5 { color:#172d4b; font-size:16px; margin:32px 0 16px; }
+.renewal_compare_grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.renewal_compare_grid figure { margin:0; min-width:0; }
+.renewal_compare_grid figcaption { color:#516076; font-size:12px; margin-bottom:10px; }
+.renewal_compare_grid figcaption b { color:#214f8d; font:600 10px Arial,sans-serif; letter-spacing:.08em; margin-right:8px; }
+.renewal_compare_grid img { display:block; width:100%; height:auto; border:1px solid #dde3ea; border-radius:6px; }
+.renewal_compare_caption { margin-top:14px; }
+.renewal_case_note { color:#697586; font-size:12px; line-height:1.8; border-top:1px solid #dce3ec; padding-top:20px; margin:26px 0 14px; }
+.renewal_case_sources { display:flex; flex-wrap:wrap; gap:20px; }
+.renewal_case_sources a { color:#214f8d; font-size:12px; text-underline-offset:5px; }
+@media(max-width:768px) { .renewal_compare_grid { grid-template-columns:1fr; gap:24px; } .renewal_case_body { padding:24px 16px; } .renewal_case summary { padding:18px 16px; } .renewal_case_intro,.renewal_compare_caption { font-size:14px; } }

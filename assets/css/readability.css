@@ -1,0 +1,52 @@
+/* Reading styles for the light work archive. */
+.main_content .web_desc,
+.main_content .event_desc,
+.main_content .motion_desc,
+.main_content .film_desc,
+.main_content #about .web_desc {
+ color:#465365;
+ font-size:15px;
+ line-height:1.9;
+}
+.main_content .web_meta,
+.main_content .film_meta,
+.main_content #about .web_meta dt,
+.main_content #about .web_meta dd {
+ font-size:14px;
+ line-height:1.8;
+}
+.main_content .web_meta dt,
+.main_content .film_meta dt { color:#637084; }
+.main_content .web_meta dd,
+.main_content .film_meta dd { color:#354154; }
+.main_content .web_label,
+.main_content .motion_label,
+.main_content .film_label,
+.main_content .event_label { color:#285caa; }
+.main_content .web_link,
+.main_content .event_view { font-size:14px; color:#34465d; }
+/* Text stays legible during a short upward entrance. */
+.main_content .scroll_reveal.is_pending { opacity:1; transform:translateY(24px); }
+.main_content .scroll_reveal.reveal_ready { transition:transform .7s cubic-bezier(.22,1,.36,1); }
+@media(max-width:480px) {
+ .main_content .web_meta, .main_content .film_meta,
+ .main_content #about .web_meta dt, .main_content #about .web_meta dd { font-size:13px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .main_content .scroll_reveal.is_pending { transform:none; }
+ .main_content .scroll_reveal.reveal_ready { transition:none; }
+}
+/* Supplementary Photoshop animation below the three motion studies. */
+.motion_supplement { display:grid; grid-template-columns:minmax(0,240px) minmax(0,1fr); align-items:center; gap:36px; margin-top:36px; padding-top:32px; border-top:1px solid #e5e5e5; }
+.motion_gif { width:100%; max-width:240px; aspect-ratio:1; border-radius:8px; overflow:hidden; background:#d6e3e6; }
+.motion_gif img { display:block; width:100%; height:auto; }
+.motion_supplement .motion_info { padding-top:0; }
+.motion_supplement .web_meta { margin-top:18px; padding-top:16px; }
+@media(max-width:600px) { .motion_supplement { grid-template-columns:minmax(0,1fr); gap:22px; } .motion_gif { max-width:280px; } }
+.banner_work { min-width:0; margin:0; }
+.banner_work figcaption { padding-top:14px; }
+.banner_work h3, .banner_group_intro h3 { margin:0; color:#202c3d; font-size:16px; line-height:1.5; font-weight:600; }
+.banner_work p { margin:6px 0 0; color:#526074; font-size:13px; line-height:1.75; word-break:keep-all; }
+.banner_group_intro { margin-top:36px; }
+.banner_group_intro p { margin:8px 0 0; max-width:65em; color:#465365; font-size:15px; line-height:1.9; word-break:keep-all; }
+.banner_group_intro + .banner_omega { margin-top:18px; }

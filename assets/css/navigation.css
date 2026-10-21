@@ -142,3 +142,16 @@ body .main_content { position: relative; z-index: 7; margin-top: -32px; border-r
  .archive_bridge .works_index_bottom { flex-direction: column; gap: 18px; }
  body .main_content { margin-top: -24px; border-radius: 24px 24px 0 0; padding-top: 44px; }
 }
+/* Keep the archive entry as a short navigation strip after Selected Works. */
+.archive_bridge { padding:22px 5vw 46px; }
+.archive_bridge .works_index { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.archive_bridge .works_index > p { flex-shrink:0; margin:0; font-size:13px; font-family:inherit; letter-spacing:.02em; color:#c4d0df; }
+.archive_bridge .works_index > p span { margin-left:10px; color:#7f9abd; }
+.archive_bridge .works_index nav { margin:0; gap:8px; }
+.archive_bridge .works_index nav a { display:inline-flex; align-items:center; min-height:44px; padding:8px 12px; font-size:12px; }
+@media(max-width:768px) {
+ .archive_bridge { padding:16px 20px 40px; }
+ .archive_bridge .works_index { align-items:flex-start; flex-direction:column; gap:12px; }
+ .archive_bridge .works_index nav { gap:6px; }
+ .archive_bridge .works_index nav a { font-size:11px; padding:8px 10px; }
+}

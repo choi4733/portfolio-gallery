@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="최희경 | 웹디자인 포트폴리오" />
+    <meta
+      property="og:description"
+      content="웹디자인 · 그래픽 디자인 · 영상 편집 작업을 담은 최희경의 포트폴리오입니다."
+    />
+    <meta
+      property="og:image"
+      content="https://choi4733.github.io/portfolio-gallery/assets/img/og-image1.png?v=2"
+    />
+    <meta
+      property="og:url"
+      content="https://choi4733.github.io/portfolio-gallery/"
+    />
+
+    <title>밝은 본문 연결 시안 | 최희경</title>
+    <link rel="stylesheet" href="assets/css/setting/reset.css" />
+    <link rel="stylesheet" href="assets/css/setting/font.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/artwork.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/banner.css?v=mobile-first-20261020"
+    />
+    <link rel="stylesheet" href="assets/css/event.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/vedio.css?v=mobile-spacing-80-20261020"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/motion.css?v=mobile-spacing-80-20261020"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/web.css?v=mobile-spacing-80-20261020"
+    />
+    <link rel="stylesheet" href="assets/css/about.css?v=resume-20261020" />
+
+    <link
+      rel="stylesheet"
+      href="assets/css/intro.css?v=cream-case-20261021"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/navigation.css?v=compact-archive-20261021"
+    />
+    <script src="assets/js/style.js?v=navigation-20261020" defer></script>
+    <script src="assets/js/intro.js?v=orbit-scroll-sequence-20261021" defer></script>
+    <script src="assets/js/earth-globe.js?v=20261020" defer></script>
+    <script src="assets/js/scroll-navigation.js?v=20261020" defer></script>
+    <link rel="preload" href="assets/img/space-earth.png" as="image" />
+    <link rel="stylesheet" href="assets/css/loader.css?v=20261020" />
+    <script>
+      (() => {
+        try {
+          if (!location.hash && !sessionStorage.getItem('portfolio-intro-seen') &&
+              !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('portfolio_loading');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <script src="assets/js/loader.js?v=20261020" defer></script>
+  <style>
+/* Light archive concept: a short atmospheric transition into a flat page. */
+.archive_bridge {
+ padding:100px 5vw 26px;
+ background:linear-gradient(to bottom,#03080f 0%,#172336 18%,#657387 42%,#c2cad3 66%,#edf0f4 84%,#f7f8fa 100%);
+}
+.archive_bridge .works_index { padding-top:12px; }
+.archive_bridge .works_index > p { color:#34445a; }
+.archive_bridge .works_index > p span { color:#627895; }
+.archive_bridge .works_index nav a { background:#ffffffb8; border-color:#a7b4c44d; color:#34445a; }
+.archive_bridge .works_index nav a:hover { background:#fff; color:#0041cc; }
+body .main_content { background:#f7f8fa; margin-top:0; border-radius:0; padding-top:38px; }
+.main_content .web_desc { color:#536071; font-size:15px; line-height:1.9; }
+.main_content .web_meta dd { color:#536071; }
+.main_content .web_label { color:#315f9b; }
+.main_content .web_preview img { border-radius:6px; }
+@media(max-width:768px) {
+ .archive_bridge { padding:82px 20px 22px; }
+ body .main_content { margin-top:0; border-radius:0; padding-top:28px; }
+}
+</style>
+</head>
+  <body id="top">
+    <div class="portfolio_loader" aria-hidden="true">
+      <div class="loader_content">
+        <p class="loader_name">CHOI HEEKYUNG</p>
+        <p class="loader_caption">DESIGN PORTFOLIO</p>
+        <div class="loader_track"><span></span></div>
+      </div>
+    </div>
+    <div class="mobile_masthead"><a href="#top">CHOI HEEKYUNG</a></div>
+    <header class="sidebar">
+      <div class="sidebar_profile">
+        <a class="sidebar_name" href="#top">CHOI HEEKYUNG</a>
+      </div>
+      <nav class="sidebar_nav" aria-label="포트폴리오 메뉴">
+        <ul class="sidebar_menu">
+          <li><a href="#web" data-sections="web">Web</a></li>
+          <li><a href="#banner" data-sections="banner">Banner</a></li>
+          <li><a href="#event" data-sections="event">Event</a></li>
+          <li><a href="#motion" data-sections="motion">Motion</a></li>
+          <li><a href="#film" data-sections="film">Video</a></li>
+          <li><a href="#artwork" data-sections="artwork">Artwork</a></li>
+          <li><a href="#about" data-sections="about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="immersive" aria-label="디자인 궤도 탐험">
+      <div class="immersive_stage">
+        <div class="space_background" aria-hidden="true"></div>
+        <div class="space_hero">
+          <p class="space_eyebrow">CHOI HEEKYUNG / DESIGN PORTFOLIO</p>
+          <h1>A universe<br />of ideas.</h1>
+          <p class="space_description">
+            그래픽과 모션을 더해, 이해하기 쉬운 웹을 만듭니다.<br />웹디자이너
+            최희경입니다.
+          </p>
+        </div>
+        <div class="orbit_gallery" id="orbit">
+          <div class="orbit_heading">
+            <p class="space_eyebrow">02 / EXPLORE MY ORBIT</p>
+            <h2>Selected Works</h2>
+          </div>
+          <div class="orbit_line" aria-hidden="true"></div>
+          <a class="orbit_card orbit_one" href="#creamcheese">
+            <div class="orbit_visual">
+              <img src="assets/img/creamcheese-renewal.png"
+                alt="크림치즈마켓 쇼핑몰 리뉴얼 미리보기"
+                width="1600" height="1000" />
+            </div>
+            <span>01 <b>WEB DESIGN</b> ↗</span>
+            <p class="orbit_project">CREAM CHEESE MARKET <small>반응형 쇼핑몰 리뉴얼</small></p>
+          </a>
+          <a class="orbit_card orbit_two" href="#banner"
+            ><div class="orbit_visual orbit_banner_visual">
+              <img
+                src="assets/img/omegaBanner.png"
+                alt="오메가3 프로모션 배너 전체 디자인"
+                width="1920"
+                height="650"
+              />
+            </div>
+            <span>02 <b>BANNER DESIGN</b> ↗</span>
+            <p class="orbit_project">OMEGA-3 <small>프로모션 배너</small></p></a
+          >
+          <a class="orbit_card orbit_three" href="#motion-intro"
+            ><div class="orbit_visual">
+              <video
+                class="orbit_preview"
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="assets/img/afterThumb03.png"
+                aria-label="Motion Intro 무음 미리보기"
+              >
+                <source
+                  src="assets/media/kinetic.mp4"
+                  type="video/mp4"
+                /></video
+              ><span class="orbit_play" aria-hidden="true">▶ PREVIEW</span>
+            </div>
+            <span>03 <b>MOTION GRAPHICS</b> ↗</span>
+            <p class="orbit_project">
+              MOTION INTRO <small>모션그래픽</small>
+            </p></a
+          >
+        </div>
+        <div class="space_footer">
+          <span class="space_chapter">01 / INTRO</span
+          ><a href="#orbit" class="explore_orbit">SCROLL TO EXPLORE ↓</a
+          ><a href="#web">작품 바로 보기 ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="archive_bridge">
+      <div class="works_index">
+        <p>전체 작업 <span aria-hidden="true">↓</span></p>
+        <nav aria-label="작업 분야 바로가기">
+          <a href="#web">Web Design</a><a href="#banner">Banner Design</a>
+          <a href="#event">Event Page</a><a href="#motion">Motion Graphics</a>
+          <a href="#film">Video Editing</a><a href="#artwork">Artwork</a>
+        </nav>
+      </div>
+    </div>
+    <main class="main_content">
+      
+      <section id="web">
+        <div class="section_heading">
+          <span class="number">01</span>
+          <h2 class="title">Web Design</h2>
+        </div>
+        <div class="web_list">
+          <article class="web_item scroll_reveal" id="creamcheese">
+            <div class="web_preview">
+              <img
+                src="assets/img/creamcheese-renewal.png"
+                alt="크림치즈마켓 반응형 쇼핑몰 리뉴얼 메인 화면"
+                loading="lazy"
+              />
+            </div>
+            <div class="web_info">
+              <p class="web_label">PERSONAL PROJECT · WEBSITE RENEWAL</p>
+
+              <h3>CREAM CHEESE MARKET</h3>
+
+              <p class="web_desc">
+                기존 사이트는 배너와 상품 이미지가 크게 배치되어 있어,
+                여러 상품을 한눈에 살펴보기 불편하다고 느꼈습니다.
+                배너와 상품 이미지의 크기를 소폭 줄여,
+                상품 목록을 더 편하게 탐색할 수 있도록 메인 페이지를 리뉴얼했습니다.
+              </p>
+              <dl class="web_meta">
+                <div>
+                  <dt>작업 내용</dt>
+                  <dd>기존 사이트 분석 · UI 리뉴얼 · 퍼블리싱 · 반응형</dd>
+                </div>
+                <div>
+                  <dt>사용 기술</dt>
+                  <dd>HTML · CSS · JavaScript · Swiper</dd>
+                </div>
+              </dl>
+              <a
+                class="web_link"
+                href="https://choi4733.github.io/renewal/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                사이트 보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          
+            <details class="renewal_case">
+              <summary>리뉴얼 전후 비교 <span aria-hidden="true">＋</span></summary>
+              <div class="renewal_case_body">
+                <p class="renewal_case_kicker">DESIGN DECISION</p>
+                <h4>이미지 크기를 줄여, 상품을 더 편하게 살펴보도록.</h4>
+                <p class="renewal_case_intro">큰 배너와 상품 사진이 화면을 많이 차지한다고 느꼈습니다. 배너의 크기와 상품 목록의 밀도를 조정해 여러 상품을 함께 살펴볼 수 있도록 구성했습니다.</p>
+                <h5>01 / 메인 배너 크기 조정</h5>
+                <div class="renewal_compare_grid">
+                  <figure><figcaption><b>BEFORE</b> 원본 홈페이지</figcaption><a href="assets/img/cream-original-top.png" target="_blank" rel="noopener noreferrer" aria-label="원본 메인 배너 캡처 크게 보기"><img src="assets/img/cream-original-top.png" alt="원본 첫 화면: 가로폭을 채우는 큰 메인 배너" loading="lazy" width="1265" height="712"></a></figure>
+                  <figure><figcaption><b>AFTER</b> 리뉴얼 홈페이지</figcaption><a href="assets/img/cream-renewal-top.png" target="_blank" rel="noopener noreferrer" aria-label="리뉴얼 메인 배너 캡처 크게 보기"><img src="assets/img/cream-renewal-top.png" alt="리뉴얼 첫 화면: 좌우 여백과 높이를 조정한 배너, 아래에 보이는 카테고리 바로가기" loading="lazy" width="1265" height="712"></a></figure>
+                </div>
+                <p class="renewal_compare_caption">배너의 크기를 소폭 줄이고 좌우 여백을 두었습니다. 첫 화면에서 배너 아래의 카테고리도 함께 보이도록 구성했습니다.</p>
+                <h5>02 / 상품 이미지와 목록 밀도 조정</h5>
+                <div class="renewal_compare_grid">
+                  <figure><figcaption><b>BEFORE</b> 3열 상품 목록</figcaption><a href="assets/img/cream-original-products.png" target="_blank" rel="noopener noreferrer" aria-label="원본 상품 목록 캡처 크게 보기"><img src="assets/img/cream-original-products.png" alt="같은 화면 너비에서 큰 상품 사진 세 개가 나란히 배치된 원본 목록" loading="lazy" width="1265" height="712"></a></figure>
+                  <figure><figcaption><b>AFTER</b> 5열 상품 목록</figcaption><a href="assets/img/cream-renewal-products.png" target="_blank" rel="noopener noreferrer" aria-label="리뉴얼 상품 목록 캡처 크게 보기"><img src="assets/img/cream-renewal-products.png" alt="같은 화면 너비에서 상품 사진 다섯 개와 상품명, 가격을 함께 보여주는 리뉴얼 목록" loading="lazy" width="1265" height="712"></a></figure>
+                </div>
+                <p class="renewal_compare_caption">상품 사진의 크기를 줄이고 PC 목록을 5열로 구성했습니다. 한 줄에서 여러 상품의 이미지와 가격을 함께 비교할 수 있도록 의도했습니다.</p>
+                <p class="renewal_case_note">동일한 1265 × 712 화면 크기로 2026.10.21 촬영한 PC 화면입니다. 원본과 리뉴얼의 상품 구성 및 배너 소재는 다르며, 이미지 크기와 배치 위주로 비교했습니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+                <div class="renewal_case_sources"><a href="https://www.creamcheese.co.kr/" target="_blank" rel="noopener noreferrer">원본 홈페이지 ↗</a><a href="https://choi4733.github.io/renewal/" target="_blank" rel="noopener noreferrer">리뉴얼 홈페이지 ↗</a></div>
+              </div>
+            </details>
+          </article>
+          
+
+          <article class="web_item scroll_reveal" id="home-start">
+            <div class="web_preview">
+              <img
+                src="assets/img/home-community.png"
+                alt="직접 제작한 HOME START 커뮤니티 목록 화면"
+                loading="lazy"
+              />
+            </div>
+            <div class="web_info">
+              <p class="web_label">TEAM PROJECT</p>
+
+              <h3>HOME START</h3>
+
+              <p class="web_desc">
+                오늘의집 스타일을 기반으로 제작한 인테리어 커뮤니티 웹
+                프로젝트입니다. 사용자가 게시글을 탐색하고 반응할 수 있도록
+                커뮤니티 게시판, 좋아요/댓글 기능, 글쓰기, 삭제된 게시글 팝업,
+                상품 페이지, 카테고리 필터링, 반응형 UI를 구현했습니다.
+              </p>
+              <dl class="web_meta">
+                <div>
+                  <dt>담당 역할</dt>
+                  <dd>
+                    샵 페이지 상품 카드 배치·정렬 및 반응형 레이아웃 구현 ·
+                    커뮤니티 페이지 전반 제작
+                  </dd>
+                </div>
+                <div>
+                  <dt>사용 기술</dt>
+                  <dd>HTML · CSS · JavaScript · Swiper</dd>
+                </div>
+              </dl>
+              <a
+                class="web_link"
+                href="https://home-start-eight.vercel.app/page/community.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                커뮤니티 보기 <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                class="web_link home_shop_link"
+                href="https://home-start-eight.vercel.app/page/shop.html#shop_kit"
+                target="_blank"
+                rel="noopener noreferrer"
+                >샵 화면 보기 <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          
+
+          <article class="web_item scroll_reveal" id="megabox">
+            <div class="web_preview">
+              <img
+                src="assets/img/webPortfolio1.png"
+                alt="메가박스 카피페이지"
+                loading="lazy"
+              />
+            </div>
+            <div class="web_info">
+              <p class="web_label">PERSONAL PROJECT · COPY PAGE</p>
+
+              <h3>MEGA BOX</h3>
+
+              <p class="web_desc">
+                메가박스 웹사이트의 주요 화면을 참고해 제작한 반응형
+                카피페이지입니다. 영화 콘텐츠와 배너를 효과적으로 보여줄 수
+                있도록 화면 구조를 분석하고, 슬라이더와 사용자 인터랙션을
+                구현하며 퍼블리싱 완성도를 높였습니다.
+              </p>
+              <dl class="web_meta">
+                <div>
+                  <dt>작업 내용</dt>
+                  <dd>원본 레이아웃 분석 · 퍼블리싱 · 인터랙션 · 반응형</dd>
+                </div>
+                <div>
+                  <dt>사용 기술</dt>
+                  <dd>HTML · CSS · JavaScript · GSAP · Swiper</dd>
+                </div>
+              </dl>
+              <a
+                class="web_link"
+                href="https://choi4733.github.io/Movie_Site/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                사이트 보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          
+
+          <article class="web_item scroll_reveal">
+            <div class="web_preview">
+              <img
+                src="assets/img/webPortfolio4.png"
+                alt="헤라 카피페이지"
+                loading="lazy"
+              />
+            </div>
+            <div class="web_info">
+              <p class="web_label">PERSONAL PROJECT · COPY PAGE</p>
+
+              <h3>HERA</h3>
+
+              <p class="web_desc">
+                HERA 브랜드관을 참고해 제작한 카피페이지입니다. 제품과
+                프로모션이 잘 드러나도록 원본의 레이아웃을 구현하고, 배너
+                슬라이드와 스크롤 방향에 따른 메뉴 노출 기능을 적용했습니다.
+              </p>
+              <dl class="web_meta">
+                <div>
+                  <dt>작업 내용</dt>
+                  <dd>레퍼런스 분석 · 퍼블리싱 · 인터랙션</dd>
+                </div>
+                <div>
+                  <dt>사용 기술</dt>
+                  <dd>HTML · CSS · JavaScript · Swiper</dd>
+                </div>
+              </dl>
+              <a
+                class="web_link"
+                href="https://choi4733.github.io/HERA_copy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                사이트 보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <!-- 헤라 카피페이지 -->
+
+          <article class="web_item scroll_reveal">
+            <div class="web_preview">
+              <img
+                src="assets/img/webPortfolio3.png"
+                alt="산 페이지"
+                loading="lazy"
+              />
+            </div>
+            <div class="web_info">
+              <p class="web_label">PERSONAL PROJECT · COPY PAGE</p>
+              <h3>MOUNTAIN</h3>
+              <p class="web_desc">
+                자연의 분위기를 담아 제작한 React 기반 랜딩 페이지입니다. 넓은
+                이미지 비주얼과 스크롤 애니메이션을 중심으로 구성하여 산의
+                깊이감과 감성적인 무드를 표현했으며, 컴포넌트 구조와 반응형
+                레이아웃을 고려해 제작했습니다.
+              </p>
+              <dl class="web_meta">
+                <div>
+                  <dt>작업 내용</dt>
+                  <dd>레퍼런스 분석 · 퍼블리싱 · 인터랙션 · 반응형</dd>
+                </div>
+                <div>
+                  <dt>사용 기술</dt>
+                  <dd>HTML · CSS · JavaScript · React</dd>
+                </div>
+              </dl>
+              <a
+                class="web_link"
+                href="https://ephemeral-dodol-30dfbe.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                사이트 보기
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+          <!--자연  페이지 -->
+        </div>
+      </section>
+
+      <section id="banner">
+        <div class="section_heading">
+          <span class="number">02</span>
+          <h2 class="title">Banner Design</h2>
+        </div>
+        <div class="banner_food scroll_reveal">
+          <img src="assets/img/sunsurollBanner.jpg" alt="순수롤배너" />
+          <img src="assets/img/madeleineBanner.jpg" alt="마들렌배너" />
+          <img src="assets/img/goldBanner.jpg" alt="골드바 배너" />
+          <img src="assets/img/yaggwaBanner.jpg" alt="전통약과 배너" />
+          <img src="assets/img/jeonbyeongBanner.jpg" alt="전통전병 배너" />
+        </div>
+        <div class="banner_omega scroll_reveal">
+          <img
+            class="banner_omega_mobile"
+            src="assets/img/omegaBannerM.png"
+            alt="오메가3 모바일 배너"
+          />
+          <img
+            class="banner_omega_pc"
+            src="assets/img/omegaBanner.png"
+            alt="오메가3 배너"
+          />
+        </div>
+      </section>
+
+      <section id="event">
+        <div class="section_heading">
+          <span class="number">03</span>
+          <h2 class="title">Event Page</h2>
+        </div>
+        <div class="event_content scroll_reveal">
+          <button
+            type="button"
+            class="event_preview"
+            id="openEvent"
+            aria-label="이벤트 페이지 전체 보기"
+          >
+            <img
+              src="assets/img/eventpage.jpg"
+              alt="시크릿데이 이벤트 페이지"
+            />
+          </button>
+          <div class="event_info">
+            <p class="event_label">EVENT PAGE DESIGN</p>
+            <h3>시크릿데이 <br />연말결산 이벤트</h3>
+            <p class="event_desc">
+              겨울 분위기의 블루 톤과 눈꽃 요소를 활용한 이벤트 페이지입니다.
+              할인율을 크게 배치해 혜택을 강조하고, 리뷰 이벤트는 핑크 톤으로
+              구분했습니다.
+            </p>
+            <button type="button" class="event_view" id="viewEvent">
+              전체 페이지 보기 <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </div>
+        <dialog id="eventModal" aria-label="이벤트 페이지 전체보기">
+          <button type="button" id="closeEvent">&times;</button>
+          <img
+            src="assets/img/eventpage.jpg"
+            alt="시크릿데이 이벤트 페이지 전체"
+          />
+        </dialog>
+      </section>
+
+      <section id="motion">
+        <div class="section_heading">
+          <span class="number">04</span>
+          <h2 class="title">Motion Graphics</h2>
+        </div>
+        <div class="motion_list">
+          <article class="motion_item scroll_reveal">
+            <div class="motion_video">
+              <video
+                controls
+                playsinline
+                preload="none"
+                poster="assets/img/afterThumb01.png"
+                aria-label="Logo Motion 영상"
+              >
+                <source src="assets/media/logomotion.mp4" type="video/mp4" />
+                이 브라우저에서는 동영상 재생을 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="motion_info">
+              <p class="motion_label">AFTER EFFECTS</p>
+              <h3>Logo Motion</h3>
+              <p class="motion_desc">
+                구글, 틱톡, 아디다스 등 여러 브랜드의 로고에 움직임을 더한
+                영상입니다. 글자의 회전과 이동, 화면 왜곡, 선이 그려지는 효과
+                등을 활용해 로고마다 다른 방식으로 등장하도록 제작했습니다.
+              </p>
+            </div>
+          </article>
+
+          <!-- 에픽하이 -->
+          <article class="motion_item scroll_reveal">
+            <div class="motion_video">
+              <video
+                controls
+                playsinline
+                preload="none"
+                poster="assets/img/afterThumb02.png"
+                aria-label="Epik High 영상"
+              >
+                <source src="assets/media/epikHigh.mp4" type="video/mp4" />
+                이 브라우저에서는 동영상 재생을 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="motion_info">
+              <p class="motion_label">AFTER EFFECTS</p>
+              <h3>Epik High</h3>
+              <p class="motion_desc">
+                에픽하이의 ‘선곡표’ 가사에 맞춰 앨범 커버가 등장하도록 제작한
+                영상입니다. 앨범 커버에 3D 효과를 적용해 입체감과 공간감을
+                더했습니다.
+              </p>
+            </div>
+          </article>
+
+          <!-- 모션 인트로 -->
+          <article class="motion_item scroll_reveal" id="motion-intro">
+            <div class="motion_video">
+              <video
+                controls
+                playsinline
+                preload="none"
+                poster="assets/img/afterThumb03.png"
+                aria-label="Motion Intro 영상"
+              >
+                <source src="assets/media/kinetic.mp4" type="video/mp4" />
+                이 브라우저에서는 동영상 재생을 지원하지 않습니다.
+              </video>
+            </div>
+
+            <div class="motion_info">
+              <p class="motion_label">AFTER EFFECTS</p>
+              <h3>Motion Intro</h3>
+              <p class="motion_desc">
+                원과 선, 텍스트의 움직임을 활용한 모션그래픽 인트로 영상입니다.
+                도형이 퍼지고 글자가 나뉘어 등장하는 효과로 경쾌한 분위기를
+                만들고, 세로 줄무늬가 화면을 덮으며 마무리되도록 제작했습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="film">
+        <div class="section_heading">
+          <span class="number">05</span>
+          <h2 class="title">Video Editing</h2>
+        </div>
+        <div class="film_content scroll_reveal">
+          <a
+            class="film_preview"
+            href="https://www.youtube.com/watch?v=LTgpnV6M3GM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="팀 프로젝트영상 유튜브에서 보기"
+          >
+            <img
+              src="assets/img/teamtumb.jPG"
+              alt="팀 프로젝트 영상 썸네일"
+              loading="lazy"
+            />
+            <span class="film_play" aria-hidden="ture">▶</span>
+            <span class="film_badge">YouTube ↗</span>
+          </a>
+          <div class="film_info">
+            <p class="film_label">TEAM PROJECT</p>
+            <h3>인생 전시회</h3>
+
+            <p class="film_desc">
+              SNS에 보여주기 위해 일상을 연출하는 주인공을 통해, 남들에게 보이는
+              나와 실제 나 사이의 거리, 그리고 과시적인 일상의 공허함을 담은
+              영상입니다.
+            </p>
+            <p class="film_desc">
+              웃으며 보다가도 “내 얘긴데?” 하고 공감할 수 있도록 기획했습니다.
+              마지막에는 질문을 던져 시청자가 자신의 일상을 돌아볼 수 있도록
+              여운을 남겼습니다.
+            </p>
+            <dl class="film_meta">
+              <div>
+                <dt>담당 역할</dt>
+                <dd>기획 · 촬영 구도 구성 · 편집 · 색보정</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Figma · Premiere Pro · After Effects</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- team  -->
+
+        <div class="film_content scroll_reveal">
+          <div class="film_video">
+            <video
+              controls
+              playsinline
+              preload="none"
+              poster="assets/img/kingsman.png"
+              aria-label="Kingsman Edit 영상"
+            >
+              <source src="assets/media/kingsman.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="film_info">
+            <p class="film_label">PERSONAL PROJECT</p>
+            <h3>Kingsman Edit</h3>
+
+            <p class="film_desc">
+              영화 ‘킹스맨’의 액션 장면을 재편집한 개인 작업입니다. 음악의
+              비트에 맞춘 컷 편집과 사운드 싱크로 장면의 속도감과 긴장감을
+              살렸습니다.
+            </p>
+
+            <p class="film_desc">
+              색보정과 화면 전환을 활용해 영화 특유의 스타일리시한 분위기를
+              강조했습니다.
+            </p>
+
+            <dl class="film_meta">
+              <div>
+                <dt>작업 내용</dt>
+                <dd>컷 편집 · 색보정 · 사운드 편집</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Premiere Pro</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- kingsman -->
+
+        <div class="film_content scroll_reveal">
+          <div class="film_video">
+            <video
+              controls
+              playsinline
+              preload="none"
+              poster="assets/img/marvel.png"
+            >
+              <source src="assets/media/marvel.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="film_info">
+            <p class="film_label">PERSONAL PROJECT</p>
+            <h3>Marvel Edit</h3>
+
+            <p class="film_desc">
+              마블 캐릭터 이미지와 로고를 활용한 인트로 영상입니다. 이미지가
+              빠르게 전환되다가 로고 안으로 모이고, 로고가 점차 작아지며 전체
+              모습이 드러나도록 제작했습니다.
+            </p>
+
+            <dl class="film_meta">
+              <div>
+                <dt>작업 내용</dt>
+                <dd>컷 편집 · 색보정 · 사운드 편집</dd>
+              </div>
+              <div>
+                <dt>사용 도구</dt>
+                <dd>Premiere Pro</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <!-- marvel -->
+      </section>
+
+      <section id="artwork">
+        <div class="section_heading">
+          <span class="number">06</span>
+          <h2 class="title">Artwork</h2>
+        </div>
+        <div class="artwork_imgs scroll_reveal">
+          <img src="assets/img/artwork.svg" alt="" />
+          <img src="assets/img/artwokrpen.svg" alt="" />
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section_heading">
+          <span class="number">07</span>
+          <h2 class="title">About</h2>
+        </div>
+
+        <div class="about_content scroll_reveal">
+          <!-- 소개: 기존 웹 작업의 텍스트 스타일 재사용 -->
+          <div class="web_info">
+            <p class="web_label">WEB DESIGNER</p>
+            <div class="about_profile">
+              <img
+                src="assets/img/profile.png"
+                alt="최희경 프로필 사진"
+                class="about_profile_img"
+              />
+            </div>
+            <h3>최희경</h3>
+            <a
+              class="about_email"
+              href="mailto:choihk4733@gmail.com"
+              aria-label="최희경에게 이메일 보내기: choihk4733@gmail.com"
+            >
+              choihk4733@gmail.com <span aria-hidden="true">↗</span>
+            </a>
+            <div class="about_resume">
+              <a
+                href="assets/docs/choi-heekyung-resume.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="이력서 보기 PDF, 새 탭에서 열림"
+                >이력서 보기 <span>PDF ↗</span></a
+              >
+            </div>
+
+            <p class="web_desc">
+              필요한 정보가 잘 보이고, 편하게 사용할 수 있는 화면을 만들고
+              싶습니다.
+            </p>
+
+            <p class="web_desc">
+              그래픽 디자인부터 영상 편집, 웹 퍼블리싱까지 직접 작업하며 표현의
+              폭을 넓혀왔습니다. <br />
+              작은 부분도 놓치지 않고 살피며, 부족한 점은 꾸준히 배우고 보완하고
+              있습니다.
+            </p>
+          </div>
+
+          <!-- 도구 · 교육 · 경력 -->
+          <div class="about_details">
+            <div class="about_group">
+              <h3 class="web_label">SKILLS</h3>
+
+              <dl class="web_meta">
+                <div>
+                  <dt>Illustrator</dt>
+                  <dd>벡터 그래픽 · 일러스트 제작</dd>
+                </div>
+
+                <div>
+                  <dt>Photoshop</dt>
+                  <dd>배너 · 이벤트 페이지 디자인</dd>
+                </div>
+                <div>
+                  <dt>Premiere Pro</dt>
+                  <dd>컷 편집 · 색보정 · 사운드 편집</dd>
+                </div>
+                <div>
+                  <dt>After Effects</dt>
+                  <dd>로고 모션 · 모션그래픽 제작</dd>
+                </div>
+                <div>
+                  <dt>HTML · CSS · JS</dt>
+                  <dd>반응형 페이지 · 인터랙션 구현</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="about_group">
+              <h3 class="web_label">EDUCATION</h3>
+
+              <dl class="web_meta">
+                <div>
+                  <dt>2025.12–2026.05</dt>
+                  <dd>AI를 활용한 웹퍼블리싱 · 프론트엔드 교육과정 수료</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="about_group">
+              <h3 class="web_label">CERTIFICATE</h3>
+
+              <dl class="web_meta">
+                <div>
+                  <dt>2021.04</dt>
+                  <dd>전산회계 1급 / 한국세무사회</dd>
+                </div>
+                <div>
+                  <dt>2021.06</dt>
+                  <dd>전산세무 2급 / 한국세무사회</dd>
+                </div>
+                <div>
+                  <dt>2025.11</dt>
+                  <dd>컴퓨터활용능력 2급 / 대한상공회의소</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="about_group">
+              <h3 class="web_label">EXPERIENCE</h3>
+
+              <dl class="web_meta">
+                <div>
+                  <dt>2018.03–2020.12</dt>
+                  <dd>대한화공 / 사무보조 · 고객응대 · 제품출납관리 · 경리</dd>
+                </div>
+                <div>
+                  <dt>2021.08–2023.08</dt>
+                  <dd>엠제이팜 / 의약품 구매 · 재고관리 · 사무업무</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- 작업 내용물  -->
+
+    <footer id="footer">
+      <div class="footer_inner">
+        <div class="footer_info">
+          <p class="footer_name">CHOI HEEKYUNG</p>
+          <p class="footer_copy">
+            © 2026 최희경. 본 사이트는 개인 포트폴리오용으로 제작되었습니다.
+          </p>
+          <p class="footer_notice">
+            작업물에 사용된 브랜드 및 일부 이미지·영상의 저작권은 각 권리자에게
+            있습니다.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <a href="#top" class="top_btn" aria-label="페이지 맨 위로 이동">
+      <span aria-hidden="true">↑</span>
+    </a>
+    <!-- top button -->
+  </body>
+</html>

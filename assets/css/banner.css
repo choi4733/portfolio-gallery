@@ -41,3 +41,13 @@
   .banner_omega { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 24px; }
   .banner_omega .banner_omega_mobile { max-width: 200px; justify-self: center; }
 }
+
+/* Describe image sourcing and the designer's contribution. */
+.banner_intro {
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}

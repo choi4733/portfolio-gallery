@@ -1,8 +1,10 @@
-/* Artwork */
+/* Keep the reduced artwork sizes and center the pair with a 32px gap. */
 .artwork_imgs {
+  --artwork-width-offset: 35px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 100px;
+  grid-template-columns: repeat(2, minmax(0, calc(35% - var(--artwork-width-offset))));
+  justify-content: center;
+  gap: 32px;
   width: 100%;
   margin: 0;
 }
@@ -13,25 +15,18 @@
   height: auto;
 }
 
-/* 미디어쿼리 */
 @media (max-width: 1200px) {
-  .artwork_imgs {
-    gap: 40px;
-  }
+  .artwork_imgs { --artwork-width-offset: 14px; }
 }
 @media (max-width: 1024px) {
-  .artwork_imgs {
-    gap: 24px;
-  }
+  .artwork_imgs { --artwork-width-offset: 8.4px; }
 }
 @media (max-width: 768px) {
-  .artwork_imgs {
-    gap: 20px;
-  }
+  .artwork_imgs { --artwork-width-offset: 7px; }
 }
 @media (max-width: 480px) {
   .artwork_imgs {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 70%);
     gap: 24px;
   }
 }

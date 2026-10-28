@@ -26,8 +26,8 @@
 .main_content .web_link,
 .main_content .event_view { font-size:14px; color:#34465d; }
 /* Text stays legible during a short upward entrance. */
-.main_content .scroll_reveal.is_pending { opacity:1; transform:translateY(24px); }
-.main_content .scroll_reveal.reveal_ready { transition:transform .7s cubic-bezier(.22,1,.36,1); }
+.main_content .scroll_reveal.is_pending { opacity:1; transform:translateY(48px); }
+.main_content .scroll_reveal.reveal_ready { transition:transform .75s cubic-bezier(.22,.61,.36,1); }
 @media(max-width:480px) {
  .main_content .web_meta, .main_content .film_meta,
  .main_content #about .web_meta dt, .main_content #about .web_meta dd { font-size:13px; }
